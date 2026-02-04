@@ -1,1 +1,23 @@
+# HU-0 – Visualización de panel de usuarios
 
+## Historia de usuario
+**Como:** Administrador  
+**Quiero:** Acceder a un panel para la gestión de usuarios agentes  
+**Para:** Gestionar a los usuarios agentes del sistema
+
+---
+
+## Criterios de aceptación
+
+1. El administrador debe iniciar sesión con una cuenta de tipo Administrador.
+2. Al acceder con credenciales de Administrador, el sistema debe redirigir al Panel Administrativo.
+3. Debe visualizarse la pestaña “Usuarios”.
+4. Debe visualizarse la imagen de la Inmobiliaria.
+5. Debe visualizarse el botón “Crear usuario”.
+6. Debe visualizarse el listado de usuarios.
+7. Debe visualizarse la barra de búsqueda.
+8. Deben visualizarse los botones:
+   - Crear usuario
+   - Eliminar usuario
+   - Editar usuario
+9. Se debe poder navegar por el listado de usuarios mediante paginación numérica.
