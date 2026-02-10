@@ -29,7 +29,7 @@
 ### CP-01 – Visualización correcta del Panel Administrativo
 
 **Tipo:** Funcional / Frontend  
-**Descripción:** Verificar que se visualicen todas las funciones e información del Panel Administrativo.  
+**Descripción:** Verificar la correcta visualización y navegación del listado de usuarios en el Panel Administrativo.  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 1, 2, 3, 4, 5, 6, 7, 8  
 
@@ -37,7 +37,7 @@
 - Usuario autenticado con rol Administrador.
 - Existen usuarios cargados en el sistema.
   
-**Tipo de caso** 
+#### Tipo de caso
 - Positivo.
 
 #### Datos de entrada
@@ -55,7 +55,34 @@
    -Mail
 - Se visualiza la barra de búsqueda.
 - Se visualizan los botones: 
-   -Crear usuario  
-   -Eliminar usuario  
-   -Editar usuario  
+   - Crear usuario  
+   - Eliminar usuario  
+   - Editar usuario  
 - Al seleccionar un número de página, el sistema muestra el listado de usuarios correspondiente a la página seleccionada.
+
+---
+
+### CP-02 – Acceso al Panel Administrativo con usuario no autorizado
+**Tipo:** Funcional / Seguridad  
+**Tipo de caso:** Negativo  
+**Prioridad:** Alta  
+**Criterios cubiertos:** 1  
+
+#### Precondiciones
+- Usuario autenticado sin rol Administrador.
+
+#### Tipo de caso
+- Negativo.
+
+#### Datos de entrada
+- Credenciales válidas de un usuario sin permisos administrativos.
+
+#### Pasos
+1. Ingresar al sistema con una cuenta de rol Usuario.
+2. Intentar acceder al Panel Administrativo.
+
+#### Resultado esperado
+- El sistema impide el acceso al Panel Administrativo.  
+- El usuario es redirigido al sistema permitido según su rol.  
+- No se visualiza la pestaña "Usuarios" ni las funcionalidades del rol administrador.  
+
