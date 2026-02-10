@@ -35,6 +35,7 @@
 
 #### Precondiciones
 - Usuario autenticado con rol Administrador.
+- Existen usuarios cargados en el sistema.
   
 **Tipo de caso** 
 - Positivo.
