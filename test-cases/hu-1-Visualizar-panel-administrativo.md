@@ -44,6 +44,7 @@
    
 #### Pasos
 1. Ingresar al sistema con una cuenta de administrador.
+2. Seleccionar un número de página en la paginación del listado de usuarios.
 
 #### Resultado esperado
 - Se visualiza la pestaña "Usuarios".
@@ -51,8 +52,9 @@
 - Se visualizan las tarjetas de usuario con la información:
    -Nombre
    -Mail
--Se visualiza la barra de búsqueda.
+- Se visualiza la barra de búsqueda.
 - Se visualizan los botones: 
-   -Crear usuario
-   -Eliminar usuario
-   -Editar usuario
+   -Crear usuario  
+   -Eliminar usuario  
+   -Editar usuario  
+- Al seleccionar un número de página, el sistema muestra el listado de usuarios correspondiente a la página seleccionada.
