@@ -29,7 +29,7 @@
 ### CP-01 – Visualización correcta del Panel Administrativo
 
 **Tipo:** Funcional / Frontend  
-**Descripción:** Verificar que se visualicen todas las funciones e información del **Panel Administrativo.**
+**Descripción:** Verificar que se visualicen todas las funciones e información del Panel Administrativo.
 **Prioridad:** Alta  
 **Criterios cubiertos:** 1, 2, 3, 4, 5, 6, 7, 8
 
@@ -37,7 +37,7 @@
 - Usuario autenticado con rol Administrador.
   
 **Tipo de caso** 
--Positivo
+- Positivo
 
 #### Datos de entrada
 -Credenciales de usuario administrador válidas.
