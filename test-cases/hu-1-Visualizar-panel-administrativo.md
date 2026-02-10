@@ -27,6 +27,7 @@
 ## Casos de prueba
 
 ### CP-01 – Visualización correcta del Panel Administrativo
+
 **Tipo:** Funcional / Frontend  
 **Descripción:** Verificar que se visualicen todas las funciones e información del **Panel Administrativo.**
 **Prioridad:** Alta  
@@ -35,10 +36,11 @@
 #### Precondiciones
 - Usuario autenticado con rol Administrador.
   
-**Tipo de caso:** Positivo
+**Tipo de caso** 
+-Positivo
 
 #### Datos de entrada
-Credenciales de usuario administrador válidas.
+-Credenciales de usuario administrador válidas.
 
 #### Pasos
 1. Ingresar al sistema con una cuenta de administrador.
