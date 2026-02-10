@@ -64,6 +64,7 @@
 
 ### CP-02 – Acceso al Panel Administrativo con usuario no autorizado
 **Tipo:** Funcional / Seguridad  
+**Descripción:** Verificar que un usuario sin rol Administrador no pueda acceder al Panel Administrativo.  
 **Tipo de caso:** Negativo  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 1  
