@@ -29,19 +29,19 @@
 ### CP-01 – Visualización correcta del Panel Administrativo
 
 **Tipo:** Funcional / Frontend  
-**Descripción:** Verificar que se visualicen todas las funciones e información del Panel Administrativo.
+**Descripción:** Verificar que se visualicen todas las funciones e información del Panel Administrativo.  
 **Prioridad:** Alta  
-**Criterios cubiertos:** 1, 2, 3, 4, 5, 6, 7, 8
+**Criterios cubiertos:** 1, 2, 3, 4, 5, 6, 7, 8  
 
 #### Precondiciones
 - Usuario autenticado con rol Administrador.
   
 **Tipo de caso** 
-- Positivo
+- Positivo.
 
 #### Datos de entrada
--Credenciales de usuario administrador válidas.
-
+- Credenciales de usuario administrador válidas.
+   
 #### Pasos
 1. Ingresar al sistema con una cuenta de administrador.
 
@@ -51,7 +51,7 @@
 - Se visualizan las tarjetas de usuario con la información:
    -Nombre
    -Mail
--Se visualiza la barra de búsqueda
+-Se visualiza la barra de búsqueda.
 - Se visualizan los botones: 
    -Crear usuario
    -Eliminar usuario
