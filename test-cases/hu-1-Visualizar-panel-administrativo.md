@@ -22,6 +22,7 @@
    - Eliminar usuario
    - Editar usuario
 8. Se debe poder navegar por el listado de usuarios mediante paginación numérica.
+
 ---
 
 ## Casos de prueba
@@ -86,4 +87,3 @@
 - El sistema impide el acceso al Panel Administrativo.  
 - El usuario es redirigido al sistema permitido según su rol.  
 - No se visualiza la pestaña "Usuarios" ni las funcionalidades del rol administrador.  
-
