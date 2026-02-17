@@ -22,10 +22,10 @@
    - Estado de publicación  
 4. El sistema debe validar los campos obligatorios.  
 5. Si faltan campos obligatorios, el sistema debe mostrar un mensaje indicando cuáles faltan.  
-6. El botón **“Guardar”** debe estar disponible.  
+6. Debe visualizarse un botón **“Guardar”**.  
 7. Al seleccionar **“Guardar”**, la propiedad debe guardarse correctamente en el sistema y en la base de datos.  
 8. Si no hay imágenes cargadas, la opción **“Publicar en la web”** debe permanecer deshabilitada.  
-9. Si se carga al menos una imagen, la opción **“Publicar en la web”** debe habilitarse.  
+9. Al cargar al menos una imagen, la opción **“Publicar en la web”** debe habilitarse.  
 10. Si se activa la opción **“Publicar en la web”** y se selecciona **"Guardar"**, la propiedad debe ser publicada en el sitio web y debe guardarse en el sistema y en la base de datos.
 11. El sistema debe mostrar el mensaje **“Propiedad creada correctamente”**.  
 12. El sistema debe redirigir a la ficha de la propiedad recién creada.  
@@ -38,9 +38,9 @@
 
 ### CP-01 – Acceso al formulario de creación de propiedad
 **Tipo:** Funcional  
-**Descripción:** Verificar que el botón "Crear Propiedad" redirija al formulario de creación de propiedad con todos sus campos.    
+**Descripción:** Verificar que el usuario pueda acceder al formulario de creación de propiedad y visualizar todos los campos y acciones disponibles.   
 **Prioridad:** Alta  
-**Criterios cubiertos:** 2, 3  
+**Criterios cubiertos:** 2, 3, 6, 13  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -56,16 +56,20 @@
 2. Seleccionar el botón **“Crear propiedad”**.
 
 #### Resultado esperado
-- El botón "Crear Propiedad" redirige al formulario de creación de propiedad.  
-- Se visualizan todos los campos del formulario.
-
+- El botón **"Crear Propiedad"** redirige al formulario de creación de propiedad.  
+- Se visualizan correctamente todos los campos del formulario.
+- Se visualiza el botón **"Guardar"**
+- Se visualiza el botón **"Cancelar"**
+  
 ---
 
-### CP-02 – Creación existosa de propiedad sin publicar en la web
+### CP-02 – Creación exitosa de propiedad sin imágenes y sin publicación web
 **Tipo:** Funcional  
-**Descripción:** Verificar que la propiedad se guarde en el sistema pero no se publique en la web, si la opción "Publicar en la web" no es seleccionada.   
+**Descripción:**  Verificar que, al crear una propiedad sin cargar imágenes, la opción 
+**“Publicar en la web”** permanezca deshabilitada y la propiedad se guarde correctamente 
+en el sistema sin ser publicada en la web.
 **Prioridad:** Alta  
-**Criterios cubiertos:** 4, 6, 7, 8, 9, 12  
+**Criterios cubiertos:** 6, 7, 8, 12  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -80,7 +84,7 @@
 - Tipo de propiedad: Departamento  
 - Dirección: Calle 12 N°123  
 - Precio: 85000  
-- Imágenes: No cargadas
+- Imágenes: N/A
   
 #### Pasos
 1. Acceder al formulario de creación de propiedad.
@@ -96,66 +100,14 @@
 
 ---
 
-### CP-03 - Crear propiedad con campos obligatorios incompletos
-**Tipo:** Funcional  
-**Descripción:** Verificar que el sistema no permita la creación de una propiedad si los campos obligatorios no fueron llenados.
-**Prioridad:** Alta  
-**Criterios cubiertos:** 4, 5
-
-#### Precondiciones
-- Usuario autenticado con rol Agente.
-
-#### Tipo de caso
-- Negativo.
-
-#### Datos de entrada
-- N/A
-  
-#### Pasos
-1. Acceder al formulario de creación de propiedad.
-2. Completar parcialmente los campos obligatorios.
-3. Seleccionar **“Guardar”**.
-   
-#### Resultado esperado
-- El sistema muestra mensajes indicando los campos obligatorios faltantes.
-- La propiedad no es creada.
-
----
-
-### CP-04 - Cancelar creación de propiedad
+### CP-03 - Creación y publicación en web exitosa de propiedad con imágenes
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que al seleccionar la opción "Cancelar", el sistema descarte la información ingresada y redirija al módulo de propiedades.
-**Prioridad:** Media   
-**Criterios cubiertos:** 10, 11
-
-#### Precondiciones
-- Usuario autenticado con rol Agente.
-
-#### Tipo de caso
-- Alternativo.
-
-#### Datos de entrada
-- N/A
-  
-#### Pasos
-1. Acceder al formulario de creación de propiedad.
-2. Completar uno o más campos del formulario.
-3. Seleccionar **“Cancelar”**.
-   
-#### Resultado esperado
-- El sistema descarta los datos ingresados.
-- El usuario es redirigido al módulo de Propiedades.
-- La propiedad no es creada.
-
----
-
-### CP-05 - Publicación exitosa de propiedad con imágenes
-
-**Tipo:** Funcional  
-**Descripción:** Verificar que al activar la opción **"Publicar en la web"**, la propiedad creada se guarde en el sistema y se publique en la web.
-**Prioridad:** Ata   
-**Criterios cubiertos:** 12, 13, 14
+**Descripción:** Verificar que, al cargar al menos una imagen y activar la opción 
+**“Publicar en la web”**, la propiedad se guarde correctamente en el sistema y sea publicada 
+en el sitio web.
+**Prioridad:** Alta   
+**Criterios cubiertos:** 9, 10
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -186,3 +138,55 @@
 - El sistema muestra el mensaje **“Propiedad creada correctamente”**.
   
 ---
+
+### CP-04 - Crear propiedad con campos obligatorios incompletos
+**Tipo:** Funcional  
+**Descripción:** Verificar que el sistema no permita la creación de una propiedad si los campos obligatorios no fueron llenados.
+**Prioridad:** Alta  
+**Criterios cubiertos:** 4, 5
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+
+#### Tipo de caso
+- Negativo.
+
+#### Datos de entrada
+- N/A
+  
+#### Pasos
+1. Acceder al formulario de creación de propiedad.
+2. Completar parcialmente los campos obligatorios.
+3. Seleccionar **“Guardar”**.
+   
+#### Resultado esperado
+- El sistema muestra mensajes indicando los campos obligatorios faltantes.
+- La propiedad no es creada.
+
+---
+
+### CP-05 - Cancelar creación de propiedad
+
+**Tipo:** Funcional  
+**Descripción:** Verificar que al seleccionar la opción **"Cancelar"**, el sistema descarte la información ingresada y redirija al módulo de propiedades.
+**Prioridad:** Media   
+**Criterios cubiertos:** 13, 14
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+
+#### Tipo de caso
+- Alternativo.
+
+#### Datos de entrada
+- N/A
+  
+#### Pasos
+1. Acceder al formulario de creación de propiedad.
+2. Completar uno o más campos del formulario.
+3. Seleccionar **“Cancelar”**.
+   
+#### Resultado esperado
+- El sistema descarta los datos ingresados.
+- El usuario es redirigido al módulo de Propiedades.
+- La propiedad no es creada.
