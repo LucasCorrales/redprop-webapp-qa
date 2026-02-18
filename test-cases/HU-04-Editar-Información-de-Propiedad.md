@@ -1,9 +1,9 @@
 # HU-04 – Editar Información de Propiedad
 
 ## Historia de usuario
-Como: Agente inmobiliario  
-Quiero: Editar los datos de una propiedad  
-Para: Mantener la información actualizada en la web y en el sistema
+**Como:** Agente inmobiliario  
+**Quiero:** Editar los datos de una propiedad  
+**Para:** Mantener la información actualizada en la web y en el sistema
 
 ---
 
@@ -28,14 +28,14 @@ Para: Mantener la información actualizada en la web y en el sistema
 
 
 ### CP-01 – Acceso al formulario de creación de propiedad
-**Tipo:** Funcional 
+**Tipo:** Funcional  
 **Descripción:** Verificar que el botón “Editar propiedad” redirija al formulario de registro con los datos de la propiedad precargados.  
-**Prioridad:** Alta
+**Prioridad:** Alta  
 **Criterios cubiertos:** 1, 2
 
 #### Precondiciones
-- Usuario autenticado con rol Agente.
-- Existe una propiedad previamente creada.
+- Usuario autenticado con rol Agente.  
+- Existe una propiedad previamente creada.  
 
 #### Tipo de caso
 - Positivo
@@ -56,9 +56,9 @@ N/A
 ---
 
 ### CP-02 – Edición exitosa de datos de una propiedad
-**Tipo:** Funcional
+**Tipo:** Funcional  
 **Descripción:**  Verificar que el sistema permita modificar los datos de una propiedad y que los cambios se reflejen en la ficha del sistema y de la página web.  
-**Prioridad:** Alta
+**Prioridad:** Alta  
 **Criterios cubiertos:** 3, 7, 10, 11
 
 #### Precondiciones
@@ -88,9 +88,9 @@ N/A
 
 ### CP-03 – Editar las imágenes de una propiedad.
 
-**Tipo:** Funcional
+**Tipo:** Funcional  
 **Descripción:** Verificar que el sistema permita agregar, eliminar y reemplazar imágenes de una propiedad existente.  
-**Prioridad:** Alta.
+**Prioridad:** Alta.  
 **Criterios cubiertos:** 4, 5, 6 
 
 #### Precondiciones
@@ -122,13 +122,13 @@ N/A
 
 ### CP-04 – Eliminación total de imágenes en propiedad publicada
 
-**Tipo:** Funcional.
+**Tipo:** Funcional.  
 **Descripción:** Verificar que el sistema no permita mantener publicada una propiedad en la web si se eliminan todas sus imágenes.  
-**Prioridad:** Alta
+**Prioridad:** Alta  
 **Criterios cubiertos:** 9, 11
 
 #### Precondiciones
-- Usuario autenticado con rol Agente.
+- Usuario autenticado con rol Agente. 
 - Propiedad publicada en la web con imágenes cargadas.
 
 #### Tipo de caso
