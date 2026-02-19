@@ -29,7 +29,7 @@
 ### CP-01 – Visualizar botón Editar
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que la botón "Editar" se muestre en la ficha de propiedad.
+**Descripción:** Verificar que el botón "Editar" se muestre en la ficha de propiedad.
 **Prioridad:** Media  
 **Criterios cubiertos:** 1  
 
