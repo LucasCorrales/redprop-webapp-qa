@@ -117,7 +117,7 @@
 
 **Tipo:** Funcional  
 **Descripción:**   
-**Prioridad:** Media  
+**Prioridad:** Baja 
 **Criterios cubiertos:** 3, 8  
 
 #### Precondiciones
