@@ -9,29 +9,54 @@
 
 ## Criterios de aceptación
 
-1. El botón “Editar propiedad” debe redirigir al formulario de registro de propiedad.
-2. El formulario de registro debe abrirse completado con los datos previamente cargados.
-3. Se debe permitir editar los datos del formulario de registro de la propiedad.
-4. Se debe permitir agregar nuevas imágenes.
-5. Se debe permitir eliminar imágenes existentes.
-6. Se debe permitir reemplazar imágenes existentes por otras.
-7. El sistema debe solicitar confirmación antes de guardar los cambios.
-8. El sistema debe impedir guardar cambios que generen una propiedad duplicada.
-9. Si se eliminan todas las imágenes, no debe permitirse la continuidad de la publicación en la web.
-10. Los cambios deben verse reflejados en la ficha de la propiedad.
-11. Los cambios deben verse reflejados en la publicación del sitio web.
+1. Debe visualizarse un botón **“Editar”** en la ficha de la propiedad.
+2. El botón “Editar propiedad” debe redirigir al formulario de registro de propiedad.
+3. El formulario de registro debe abrirse completado con los datos previamente cargados.
+4. Se debe permitir editar los datos del formulario de registro de la propiedad.
+5. Se debe permitir agregar nuevas imágenes.
+6. Se debe permitir eliminar imágenes existentes.
+7. Se debe permitir reemplazar imágenes existentes por otras.
+8. El sistema debe solicitar confirmación antes de guardar los cambios.
+9. El sistema debe impedir guardar cambios que generen una propiedad duplicada.
+10. Si se eliminan todas las imágenes, no debe permitirse la continuidad de la publicación en la web.
+11. Los cambios deben verse reflejados en la ficha de la propiedad.
+12. Los cambios deben verse reflejados en la publicación del sitio web.
 
 ---
 
-
 ## Casos de prueba
 
+### CP-01 – Visualizar botón Editar
 
-### CP-01 – Acceso al formulario de creación de propiedad
+**Tipo:** Funcional  
+**Descripción:** Verificar que la botón "Editar" se muestre en la ficha de propiedad.
+**Prioridad:** Media  
+**Criterios cubiertos:** 1  
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Propiedad existente.
+
+#### Tipo de caso
+- Positivo
+
+#### Datos de entrada
+- N/A
+
+#### Pasos
+1. Acceder a la ficha de una propiedad existente.
+2. Visualizar las acciones disponibles.
+
+#### Resultado esperado
+- Se visualiza el botón **“Editar”** en la ficha.
+
+---
+
+### CP-02 – Acceso al formulario de creación de propiedad
 **Tipo:** Funcional  
 **Descripción:** Verificar que el botón “Editar propiedad” redirija al formulario de registro con los datos de la propiedad precargados.  
 **Prioridad:** Alta  
-**Criterios cubiertos:** 1, 2
+**Criterios cubiertos:** 2, 3
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.  
@@ -55,11 +80,11 @@
 
 ---
 
-### CP-02 – Edición exitosa de datos de una propiedad
+### CP-03 – Edición exitosa de datos de una propiedad
 **Tipo:** Funcional  
 **Descripción:**  Verificar que el sistema permita modificar los datos de una propiedad y que los cambios se reflejen en la ficha del sistema y de la página web.  
 **Prioridad:** Alta  
-**Criterios cubiertos:** 3, 7, 10, 11
+**Criterios cubiertos:** 4, 8, 11, 12
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -86,12 +111,12 @@
 
 ---
 
-### CP-03 – Editar las imágenes de una propiedad.
+### CP-04 – Editar las imágenes de una propiedad.
 
 **Tipo:** Funcional  
 **Descripción:** Verificar que el sistema permita agregar, eliminar y reemplazar imágenes de una propiedad existente.  
 **Prioridad:** Alta.  
-**Criterios cubiertos:** 4, 5, 6 
+**Criterios cubiertos:** 5, 6, 7 
 
 #### Precondiciones
 - Agente autenticado con rol Agente.
@@ -120,12 +145,12 @@
 
 ---
 
-### CP-04 – Eliminación total de imágenes en propiedad publicada
+### CP-05 – Eliminar totdas las imágenes en propiedad publicada
 
 **Tipo:** Funcional.  
 **Descripción:** Verificar que el sistema no permita mantener publicada una propiedad en la web si se eliminan todas sus imágenes.  
 **Prioridad:** Alta  
-**Criterios cubiertos:** 9, 11
+**Criterios cubiertos:** 10, 12
 
 #### Precondiciones
 - Usuario autenticado con rol Agente. 
