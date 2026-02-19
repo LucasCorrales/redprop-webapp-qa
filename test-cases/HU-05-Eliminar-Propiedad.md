@@ -24,7 +24,7 @@
 ### CP-01 – Visualizar botón Eliminar propiedad
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que la botón "Eliminar propiedad" se muestre en la ficha de propiedad.
+**Descripción:** Verificar que el botón "Eliminar propiedad" se muestre en la ficha de propiedad.
 **Prioridad:** Media  
 **Criterios cubiertos:** 1  
 
