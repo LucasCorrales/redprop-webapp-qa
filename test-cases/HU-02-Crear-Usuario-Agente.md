@@ -1,4 +1,4 @@
-# HU-2 – Crear Usuario Agente
+# HU-02 – Crear Usuario Agente
 
 ## Historia de usuario
 **Como:** Administrador  
