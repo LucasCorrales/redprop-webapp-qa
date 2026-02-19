@@ -1,4 +1,4 @@
-# HU-3 – Crear Propiedad Inmobiliaria
+# HU-03 – Crear Propiedad Inmobiliaria
 
 ## Historia de usuario
 **Como:** Agente inmobiliario  
