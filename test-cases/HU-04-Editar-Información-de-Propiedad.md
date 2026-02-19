@@ -41,7 +41,7 @@
 - Positivo
 
 #### Datos de entrada
-N/A
+- N/A
 
 #### Pasos
 1. Iniciar sesión con cuenta de Agente.
@@ -132,10 +132,10 @@ N/A
 - Propiedad publicada en la web con imágenes cargadas.
 
 #### Tipo de caso
-- Negativo.
+- Alternativo.
 
 #### Datos de entrada
-N/A
+- N/A
 
 #### Pasos
 1. Acceder al formulario de edición de la propiedad.
@@ -146,7 +146,6 @@ N/A
 #### Resultado esperado
 - El sistema desactiva la opción "Publicar en la web".
 - El sistema deshabilita la opción "Publicar en la web"
-- La propiedad deja de mostrarse en la página web.
-
----
+- La propiedad deja de estar publicada en la página web.
+- Los cambios se reflejan en la ficha de la propedad.
 
