@@ -1,4 +1,4 @@
-# HU-1 – Visualizar Panel Administrativo
+# HU-01 – Visualizar Panel Administrativo
 
 ## Historia de usuario
 **Como:** Administrador  
