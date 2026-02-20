@@ -105,7 +105,7 @@ en el sistema sin ser publicada en la web.
 - Título: Departamento 2 ambientes  
 - Provincia: Buenos Aires  
 - Ciudad: La Plata  
-- Tipo de propiedad: Departamento  
+- Tipo: Departamento  
 - Dirección: Calle 12 N°123  
 - Precio: 85000  
 - Imágenes: N/A
@@ -143,7 +143,7 @@ en el sitio web.
 - Título: Casa 4 ambientes 
 - Provincia: Buenos Aires  
 - Ciudad: La Plata  
-- Tipo de propiedad: Casa  
+- Tipo: Casa  
 - Dirección: Calle 11 N°123  
 - Precio: 125000  
 - Imágenes: img1.jpg, img2.jpg, img3.jpg
@@ -214,3 +214,213 @@ en el sitio web.
 - El sistema descarta los datos ingresados.
 - El usuario es redirigido al módulo de Propiedades.
 - La propiedad no es creada.
+
+---
+
+## Casos de prueba Backend (API)
+
+### CP-BE-01 – Creación exitosa de propiedad no publicada
+
+**Tipo:** Funcional – Backend (API)
+**Descripción:** 
+**Prioridad:** Alta
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Positivo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{
+  "title": "Departamento Sin Imágenes",
+  "province": "Ciudad Autónoma de Buenos Aires",
+  "city": "CABA",
+  "property_type": "Departamento",
+  "street": "Avenida de Prueba 12345",
+  "price": 75000,
+  "images": [],
+  "featured_web": False
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /properties.
+2. Enviar el body con todos los campos obligatorios completos.
+3. No enviar imágenes.
+4. Enviar la opción publicar en web como false.
+5. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 201 Created.
+- La respuesta incluye un ID de propiedad generado.
+- La propiedad se guarda en la base de datos.
+- El estado de publicación queda como no publicada.
+- No se genera publicación en el sitio web.
+  
+---
+
+### CP-BE-02 – Creación y publicación exitosa de propiedad con imágenes
+
+**Tipo:** Funcional – Backend
+**Descripción:**   
+**Prioridad:** Alta
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Positivo
+
+#### Endpoint
+- POST /properties
+ 
+#### Datos de entrada (Body)
+{
+  "title": "Departamento Con Imágenes",
+  "province": "Ciudad Autónoma de Buenos Aires",
+  "city": "CABA",
+  "property_type": "Departamento",
+  "street": "Avenida Testing 12345",
+  "price": 95000,
+  "images": ["img1.jpg"],
+  "featured_web": True
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /properties.
+2. Enviar el body con datos válidos.
+3. Adjuntar al menos una imagen.
+4. Enviar la opción publicar en web como true.
+5. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 201 Created.
+- La respuesta incluye el ID de la propiedad.
+- La propiedad se guarda en la base de datos.
+- La propiedad queda marcada como publicada.
+- La publicación queda disponible en el sitio web.
+
+---
+
+### CP-BE-03 – Intento de crear propiedad con campos obligatorios faltantes
+
+**Tipo:** Funcional - BackEnd
+**Descripción:**   
+**Prioridad:** Alta
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Negativo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{
+  "title": "",
+  "province": "",
+  "city": "",
+  "property_type": "",
+  "street": "",
+  "price":,
+  "images": [],
+  "featured_web":
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /properties.
+2. Enviar el body con uno o más campos obligatorios faltantes.
+3. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 400 Bad Request.
+- Mensaje indicando los campos obligatorios faltantes.
+- La propiedad no se guarda en la base de datos.
+
+---
+
+### CP-BE-04 – Intento de publicar propiedad sin imágenes
+
+**Tipo:** Funcional - BackEnd
+**Descripción:**   
+**Prioridad:** Media
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Negativo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{
+  "title": "Casa Publicada Sin Imágen",
+  "province": "Ciudad Autónoma de Buenos Aires",
+  "city": "CABA",
+  "property_type": "Casa",
+  "street": "Prueba 123456",
+  "price": 150000,
+  "images": [],
+  "featured_web": True
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint **/properties**.
+2. Enviar el body solicitando publicación sin imágenes.
+3. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 400 Bad Request o 422 Unprocessable Entity.
+- Mensaje indicando que no se puede publicar una propiedad sin imágenes.
+- La propiedad no se publica en la web.
+  
+---
+
+### CP-BE-04 – Intento de publicar propiedad sin imágenes
+
+**Tipo:** Funcional - BackEnd
+**Descripción:**   
+**Prioridad:** Funcional - BackEnd
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Negativo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{
+  "title": "Casa Publicada Sin Imágen",
+  "province": "Ciudad Autónoma de Buenos Aires",
+  "city": "CABA",
+  "property_type": "Casa",
+  "street": "Prueba 123456",
+  "price": 150000,
+  "images": [],
+  "featured_web": True
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint **/properties**.
+2. Enviar el body solicitando publicación sin imágenes.
+3. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 400 Bad Request o 422 Unprocessable Entity.
+- Mensaje indicando que no se puede publicar una propiedad sin imágenes.
+- La propiedad no se publica en la web.
