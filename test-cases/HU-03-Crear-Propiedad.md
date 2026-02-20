@@ -221,9 +221,9 @@ en el sitio web.
 
 ### CP-BE-01 – Creación exitosa de propiedad no publicada
 
-**Tipo:** Funcional – Backend (API)
-**Descripción:** 
-**Prioridad:** Alta
+**Tipo:** Funcional – Backend (API)  
+**Descripción:**  
+**Prioridad:** Alta  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -237,14 +237,14 @@ en el sitio web.
 
 #### Datos de entrada (Body)
 {
-  "title": "Departamento Sin Imágenes",
-  "province": "Ciudad Autónoma de Buenos Aires",
-  "city": "CABA",
-  "property_type": "Departamento",
-  "street": "Avenida de Prueba 12345",
-  "price": 75000,
-  "images": [],
-  "featured_web": False
+  "title": "Departamento Sin Imágenes",  
+  "province": "Ciudad Autónoma de Buenos Aires",  
+  "city": "CABA",  
+  "property_type": "Departamento",  
+  "street": "Avenida de Prueba 12345",  
+  "price": 75000,  
+  "images": [],  
+  "featured_web": false  
 }
 
 #### Pasos
@@ -265,9 +265,9 @@ en el sitio web.
 
 ### CP-BE-02 – Creación y publicación exitosa de propiedad con imágenes
 
-**Tipo:** Funcional – Backend
+**Tipo:** Funcional – Backend  
 **Descripción:**   
-**Prioridad:** Alta
+**Prioridad:** Alta  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -281,14 +281,14 @@ en el sitio web.
  
 #### Datos de entrada (Body)
 {
-  "title": "Departamento Con Imágenes",
-  "province": "Ciudad Autónoma de Buenos Aires",
-  "city": "CABA",
-  "property_type": "Departamento",
-  "street": "Avenida Testing 12345",
-  "price": 95000,
-  "images": ["img1.jpg"],
-  "featured_web": True
+  "title": "Departamento Con Imágenes",  
+  "province": "Ciudad Autónoma de Buenos Aires",  
+  "city": "CABA",  
+  "property_type": "Departamento",  
+  "street": "Avenida Testing 12345",  
+  "price": 95000,  
+  "images": ["img1.jpg"],  
+  "featured_web": true  
 }
 
 #### Pasos
@@ -309,13 +309,13 @@ en el sitio web.
 
 ### CP-BE-03 – Intento de crear propiedad con campos obligatorios faltantes
 
-**Tipo:** Funcional - BackEnd
+**Tipo:** Funcional - BackEnd  
 **Descripción:**   
-**Prioridad:** Alta
+**Prioridad:** Alta  
 
 #### Precondiciones
-- Usuario autenticado con rol Agente.
-- Token de sesión válido.
+- Usuario autenticado con rol Agente.  
+- Token de sesión válido.  
 
 #### Tipo de caso
 - Negativo
@@ -325,14 +325,14 @@ en el sitio web.
 
 #### Datos de entrada (Body)
 {
-  "title": "",
-  "province": "",
-  "city": "",
-  "property_type": "",
-  "street": "",
-  "price":,
-  "images": [],
-  "featured_web":
+  "title": "",  
+  "province": "",  
+  "city": "",  
+  "property_type": "",  
+  "street": "",  
+  "price":,  
+  "images": [],  
+  "featured_web":  
 }
 
 #### Pasos
@@ -349,8 +349,8 @@ en el sitio web.
 
 ### CP-BE-04 – Intento de publicar propiedad sin imágenes
 
-**Tipo:** Funcional - BackEnd
-**Descripción:**   
+**Tipo:** Funcional - BackEnd  
+**Descripción:**  
 **Prioridad:** Media
 
 #### Precondiciones
@@ -365,54 +365,14 @@ en el sitio web.
 
 #### Datos de entrada (Body)
 {
-  "title": "Casa Publicada Sin Imágen",
-  "province": "Ciudad Autónoma de Buenos Aires",
-  "city": "CABA",
-  "property_type": "Casa",
-  "street": "Prueba 123456",
-  "price": 150000,
-  "images": [],
-  "featured_web": True
-}
-
-#### Pasos
-1. Realizar una petición POST al endpoint **/properties**.
-2. Enviar el body solicitando publicación sin imágenes.
-3. Observar la respuesta de la API.
-
-#### Resultado esperado
-- Código de respuesta 400 Bad Request o 422 Unprocessable Entity.
-- Mensaje indicando que no se puede publicar una propiedad sin imágenes.
-- La propiedad no se publica en la web.
-  
----
-
-### CP-BE-04 – Intento de publicar propiedad sin imágenes
-
-**Tipo:** Funcional - BackEnd
-**Descripción:**   
-**Prioridad:** Funcional - BackEnd
-
-#### Precondiciones
-- Usuario autenticado con rol Agente.
-- Token de sesión válido.
-
-#### Tipo de caso
-- Negativo
-
-#### Endpoint
-- POST /properties
-
-#### Datos de entrada (Body)
-{
-  "title": "Casa Publicada Sin Imágen",
-  "province": "Ciudad Autónoma de Buenos Aires",
-  "city": "CABA",
-  "property_type": "Casa",
-  "street": "Prueba 123456",
-  "price": 150000,
-  "images": [],
-  "featured_web": True
+  "title": "Casa Publicada Sin Imágen",  
+  "province": "Ciudad Autónoma de Buenos Aires",  
+  "city": "CABA",  
+  "property_type": "Casa",  
+  "street": "Prueba 123456",  
+  "price": 150000,  
+  "images": [],  
+  "featured_web": true  
 }
 
 #### Pasos
