@@ -2,7 +2,7 @@
 
 ## Historia de usuario
 **Como:** Administrador  
-**Quiero:** Crear un nuevo Usuario 
+**Quiero:** Crear un nuevo Usuario  
 **Para:** Que pueda acceder y operar en el sistema.
 
 ---
@@ -30,7 +30,7 @@
 
 ### CP-01 – Acceso al formulario de creación de usuario
 
-**Tipo:** Funcional
+**Tipo:** Funcional  
 **Descripción:** Verificar que el botón "Crear Usuario" redirija al formulario de creación de usuario.
 **Prioridad:** Alta  
 **Criterios cubiertos:** 1, 2
@@ -86,7 +86,7 @@
 ### CP-03 – Creación exitosa de usuario con rol Agente
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que el sistema permita crear correctamente un nuevo usuario con rol Agente al completar los campos obligatorios y confirmar la acción. 
+**Descripción:** Verificar que el sistema permita crear correctamente un nuevo usuario con rol Agente al completar los campos obligatorios y confirmar la acción.  
 **Prioridad:** Alta  
 **Criterios cubiertos:**  4, 6, 7, 8    
 
@@ -210,7 +210,3 @@
 #### Resultado esperado
 - El sistema descarta los datos ingresados.  
 - El usuario no es creado ni registrado en el sistema.
-
-
-
-
