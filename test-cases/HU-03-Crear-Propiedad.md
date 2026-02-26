@@ -108,9 +108,7 @@
 
 ### CP-03 – Creación exitosa de propiedad sin imágenes y sin publicación web
 **Tipo:** Funcional  
-**Descripción:**  Verificar que, al crear una propiedad sin cargar imágenes, la opción 
-**“Publicar en la web”** permanezca deshabilitada y la propiedad se guarde correctamente 
-en el sistema sin ser publicada en la web.  
+**Descripción:** Verificar que, al crear una propiedad sin cargar imágenes, la opción “Publicar en la web” permanezca deshabilitada y la propiedad se guarde correctamente en el sistema sin ser publicada en la web.  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 6, 9, 12, 13, 14  
 
@@ -146,9 +144,7 @@ en el sistema sin ser publicada en la web.
 ### CP-04 - Creación y publicación en web exitosa de propiedad con imágenes
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que, al cargar al menos una imagen y activar la opción 
-**“Publicar en la web”**, la propiedad se guarde correctamente en el sistema y sea publicada 
-en el sitio web.  
+**Descripción:** Verificar que, al cargar al menos una imagen y activar la opción “Publicar en la web”, la propiedad se guarde correctamente en el sistema y sea publicada en el sitio web.  
 **Prioridad:** Alta   
 **Criterios cubiertos:** 6, 10, 11, 13, 14
 
