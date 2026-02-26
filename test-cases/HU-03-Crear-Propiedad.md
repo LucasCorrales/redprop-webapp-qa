@@ -45,7 +45,7 @@
 ### CP-01 – Visualizar botón Crear Propiedad
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que el botón "Crear Propiedad" se muestre en el menú de navegación.
+**Descripción:** Verificar que el botón "Crear Propiedad" se muestre en el menú de navegación.  
 **Prioridad:** Media  
 **Criterios cubiertos:** 1  
 
@@ -69,7 +69,7 @@
 
 ### CP-02 – Acceso al formulario de creación de propiedad
 **Tipo:** Funcional  
-**Descripción:** Verificar que el usuario pueda acceder al formulario de creación de propiedad y visualizar todos los campos y acciones disponibles.   
+**Descripción:** Verificar que el usuario pueda acceder al formulario de creación de propiedad y visualizar todos los campos y acciones disponibles.  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 2, 5, 7
 
@@ -110,7 +110,7 @@
 **Tipo:** Funcional  
 **Descripción:**  Verificar que, al crear una propiedad sin cargar imágenes, la opción 
 **“Publicar en la web”** permanezca deshabilitada y la propiedad se guarde correctamente 
-en el sistema sin ser publicada en la web.
+en el sistema sin ser publicada en la web.  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 6, 9, 12, 13, 14  
 
@@ -148,7 +148,7 @@ en el sistema sin ser publicada en la web.
 **Tipo:** Funcional  
 **Descripción:** Verificar que, al cargar al menos una imagen y activar la opción 
 **“Publicar en la web”**, la propiedad se guarde correctamente en el sistema y sea publicada 
-en el sitio web.
+en el sitio web.  
 **Prioridad:** Alta   
 **Criterios cubiertos:** 6, 10, 11, 13, 14
 
@@ -185,7 +185,7 @@ en el sitio web.
 
 ### CP-05 - Crear propiedad con campos obligatorios incompletos
 **Tipo:** Funcional  
-**Descripción:** Verificar que el sistema no permita la creación de una propiedad si los campos obligatorios no fueron llenados.
+**Descripción:** Verificar que el sistema no permita la creación de una propiedad si los campos obligatorios no fueron llenados.  
 **Prioridad:** Alta  
 **Criterios cubiertos:** 3, 4
 
@@ -212,7 +212,7 @@ en el sitio web.
 ### CP-06 - Cancelar creación de propiedad
 
 **Tipo:** Funcional  
-**Descripción:** Verificar que al seleccionar la opción **"Cancelar"**, el sistema descarte la información ingresada y redirija al módulo de propiedades.
+**Descripción:** Verificar que al seleccionar la opción **"Cancelar"**, el sistema descarte la información ingresada y redirija al módulo de propiedades.  
 **Prioridad:** Media   
 **Criterios cubiertos:** 8
 
