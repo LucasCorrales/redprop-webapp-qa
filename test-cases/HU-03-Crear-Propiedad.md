@@ -19,17 +19,24 @@
    - Precio  
    - Imágenes de la propiedad  
    - Estado de publicación  
-3. El sistema debe validar los campos obligatorios.  
+3. El sistema debe validar los campos obligatorios:
+   - Título de la propiedad  
+   - Provincia  
+   - Ciudad  
+   - Tipo de propiedad  
+   - Dirección  
+   - Precio  
 4. Si faltan campos obligatorios, el sistema debe mostrar un mensaje indicando cuáles faltan.  
 5. Debe visualizarse un botón **“Guardar”**.  
-6. Al seleccionar **“Guardar”**, la propiedad debe guardarse correctamente en el sistema y en la base de datos.  
-7. Si no hay imágenes cargadas, la opción **“Publicar en la web”** debe permanecer deshabilitada.  
-8. Al cargar al menos una imagen, la opción **“Publicar en la web”** debe habilitarse.  
-9. Si se activa la opción **“Publicar en la web”** y se selecciona **"Guardar"**, la propiedad debe ser publicada en el sitio web y debe guardarse en el sistema y en la base de datos.
-10. El sistema debe mostrar el mensaje **“Propiedad creada correctamente”**.  
-11. El sistema debe redirigir a la ficha de la propiedad recién creada.  
-12. Debe visualizarse un botón **“Cancelar”**.  
-13. Al seleccionar **“Cancelar”**, el sistema debe descartar la operación y redirigir al módulo de Propiedades.
+6. Al seleccionar **“Guardar”**, la propiedad debe guardarse correctamente en el sistema y en la base de datos.
+7. Debe visualizarse un botón **“Cancelar”**.
+8. Al seleccionar **“Cancelar”**, el sistema debe descartar la operación y redirigir al módulo de Propiedades.
+9. Si no hay imágenes cargadas, la opción **“Publicar en la web”** debe permanecer deshabilitada.  
+10. Al cargar al menos una imagen, la opción **“Publicar en la web”** debe habilitarse.  
+11. Si se activa la opción **“Publicar en la web”** y se selecciona **"Guardar"**, la propiedad debe ser publicada en el sitio web y debe guardarse en el sistema y en la base de datos.
+12. Si no se informa el estado de publicación, la propiedad debe crearse como no publicada.
+13. El sistema debe mostrar el mensaje **“Propiedad creada correctamente”** al crear exitosamente una propiedad.  
+14. El sistema debe redirigir a la ficha de la propiedad recién creada.  
 
 ---
 
@@ -64,7 +71,7 @@
 **Tipo:** Funcional  
 **Descripción:** Verificar que el usuario pueda acceder al formulario de creación de propiedad y visualizar todos los campos y acciones disponibles.   
 **Prioridad:** Alta  
-**Criterios cubiertos:** 2, 5, 12 
+**Criterios cubiertos:** 2, 5, 7
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -78,12 +85,24 @@
 #### Pasos
 1. Iniciar sesión con cuenta de Agente.  
 2. Seleccionar el botón **“Crear propiedad”** del menú de navegación.
-
+3. Visualizar los campos:
+   - Título de la propiedad  
+   - Provincia  
+   - Ciudad  
+   - Tipo de propiedad  
+   - Dirección  
+   - Precio  
+   - Imágenes de la propiedad  
+   - Estado de publicación
+4. Visualizar los botones:
+  - "Guardar"
+  - "Cancelar"
+    
 #### Resultado esperado
 - El botón **"Crear Propiedad"** redirige al formulario de creación de propiedad.  
 - Se visualizan correctamente todos los campos del formulario.
-- Se visualiza el botón **"Guardar"**
-- Se visualiza el botón **"Cancelar"**
+- Se visualiza el botón "Guardar".
+- Se visualiza el botón "Cancelar".
   
 ---
 
@@ -93,7 +112,7 @@
 **“Publicar en la web”** permanezca deshabilitada y la propiedad se guarde correctamente 
 en el sistema sin ser publicada en la web.
 **Prioridad:** Alta  
-**Criterios cubiertos:** 5, 6, 7, 11  
+**Criterios cubiertos:** 6, 9, 12, 13, 14  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -131,7 +150,7 @@ en el sistema sin ser publicada en la web.
 **“Publicar en la web”**, la propiedad se guarde correctamente en el sistema y sea publicada 
 en el sitio web.
 **Prioridad:** Alta   
-**Criterios cubiertos:** 8, 9
+**Criterios cubiertos:** 6, 10, 11, 13, 14
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -160,6 +179,7 @@ en el sitio web.
 - La propiedad se guarda en el sistema.
 - La propiedad es publicada en el sitio web.
 - El sistema muestra el mensaje **“Propiedad creada correctamente”**.
+- El sistema redirige a la ficha de la propiedad recién creada.
   
 ---
 
@@ -194,7 +214,7 @@ en el sitio web.
 **Tipo:** Funcional  
 **Descripción:** Verificar que al seleccionar la opción **"Cancelar"**, el sistema descarte la información ingresada y redirija al módulo de propiedades.
 **Prioridad:** Media   
-**Criterios cubiertos:** 12, 13
+**Criterios cubiertos:** 8
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -219,11 +239,12 @@ en el sitio web.
 
 ## Casos de prueba Backend (API)
 
-### CP-BE-01 – Creación exitosa de propiedad no publicada
+### CP-BE-01 – Creación exitosa de propiedad sin publicar en página web
 
 **Tipo:** Funcional – Backend (API)  
-**Descripción:**  
+**Descripción:** Verificar que la API permita crear una propiedad no publicada cuando no se envían imágenes.  
 **Prioridad:** Alta  
+**Criterios cubiertos:** 6, 12
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -236,7 +257,7 @@ en el sitio web.
 - POST /properties
 
 #### Datos de entrada (Body)
-{
+{  
   "title": "Departamento Sin Imágenes",  
   "province": "Ciudad Autónoma de Buenos Aires",  
   "city": "CABA",  
@@ -251,7 +272,7 @@ en el sitio web.
 1. Realizar una petición POST al endpoint /properties.
 2. Enviar el body con todos los campos obligatorios completos.
 3. No enviar imágenes.
-4. Enviar la opción publicar en web como false.
+4. Enviar "featured_web": false.
 5. Observar la respuesta de la API.
 
 #### Resultado esperado
@@ -263,11 +284,12 @@ en el sitio web.
   
 ---
 
-### CP-BE-02 – Creación y publicación exitosa de propiedad con imágenes
+### CP-BE-02 – Creación y publicación en página web de propiedad con imágenes
 
 **Tipo:** Funcional – Backend  
-**Descripción:**   
+**Descripción:** Verificar que la API permita crear y publicar una propiedad cuando se envían imágenes y se solicita la publicación en la web.  
 **Prioridad:** Alta  
+**Criterios cubiertos:** 6, 11
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -280,7 +302,7 @@ en el sitio web.
 - POST /properties
  
 #### Datos de entrada (Body)
-{
+{  
   "title": "Departamento Con Imágenes",  
   "province": "Ciudad Autónoma de Buenos Aires",  
   "city": "CABA",  
@@ -310,8 +332,9 @@ en el sitio web.
 ### CP-BE-03 – Intento de crear propiedad con campos obligatorios faltantes
 
 **Tipo:** Funcional - BackEnd  
-**Descripción:**   
+**Descripción:** Validar que la API no permita crear una propiedad cuando faltan campos obligatorios.  
 **Prioridad:** Alta  
+**Criterios cubiertos:** 3, 4  
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.  
@@ -324,15 +347,15 @@ en el sitio web.
 - POST /properties
 
 #### Datos de entrada (Body)
-{
+{  
   "title": "",  
   "province": "",  
   "city": "",  
   "property_type": "",  
   "street": "",  
-  "price":,  
+  "price": null,  
   "images": [],  
-  "featured_web":  
+  "featured_web": false
 }
 
 #### Pasos
@@ -350,8 +373,9 @@ en el sitio web.
 ### CP-BE-04 – Intento de publicar propiedad sin imágenes
 
 **Tipo:** Funcional - BackEnd  
-**Descripción:**  
-**Prioridad:** Media
+**Descripción:** Verificar que la API impida la publicación de una propiedad cuando no se envían imágenes.  
+**Prioridad:** Alta  
+**Criterios cubiertos:** 9 
 
 #### Precondiciones
 - Usuario autenticado con rol Agente.
@@ -364,7 +388,7 @@ en el sitio web.
 - POST /properties
 
 #### Datos de entrada (Body)
-{
+{  
   "title": "Casa Publicada Sin Imágen",  
   "province": "Ciudad Autónoma de Buenos Aires",  
   "city": "CABA",  
@@ -377,10 +401,100 @@ en el sitio web.
 
 #### Pasos
 1. Realizar una petición POST al endpoint **/properties**.
-2. Enviar el body solicitando publicación sin imágenes.
-3. Observar la respuesta de la API.
+2. Enviar el body con datos válidos.
+3. No cargar imágenes.
+4. Enviar "featured_web": true.
+6. Observar la respuesta de la API.
 
 #### Resultado esperado
 - Código de respuesta 400 Bad Request o 422 Unprocessable Entity.
 - Mensaje indicando que no se puede publicar una propiedad sin imágenes.
 - La propiedad no se publica en la web.
+
+---
+
+### CP-BE-05 – Creación de propiedad sin imágenes y sin estado de publicación informado
+
+**Tipo:** Funcional - BackEnd  
+**Descripción:** Verificar que, al no enviar imágenes ni el campo featured_web, la API cree la propiedad como no publicada por defecto.    
+**Prioridad:** Media.  
+**Criterios cubiertos:** 6, 12
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Positivo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{  
+  "title": "Propiedad sin imágenes ni estado",  
+  "province": "Buenos Aires",   
+  "city": "La Plata",  
+  "property_type": "Departamento",  
+  "street": "Calle 123",  
+  "price": 80000,  
+  "images": []  
+}  
+
+#### Pasos
+1. Realizar una petición POST al endpoint /properties.
+2. Enviar el body con datos válidos.
+3. No enviar imágenes.
+4. No enviar el campo "featured_web".
+6. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 201 Created.
+- La propiedad se guarda correctamente en la base de datos.
+- El campo featured_web queda con valor false por defecto.
+- La propiedad no se publica en la web.
+- La respuesta incluye el ID de la propiedad creada.
+
+---
+
+### CP-BE-06 – Creación de propiedad con imágenes y sin estado de publicación informado
+
+**Tipo:** Funcional - BackEnd    
+**Descripción:** Verificar que, al enviar imágenes pero no informar el estado de publicación, la propiedad se cree sin publicarse en la web.  
+**Prioridad:** Media.  
+**Criterios cubiertos:** 6, 12
+
+#### Precondiciones
+- Usuario autenticado con rol Agente.
+- Token de sesión válido.
+
+#### Tipo de caso
+- Positivo
+
+#### Endpoint
+- POST /properties
+
+#### Datos de entrada (Body)
+{  
+  "title": "Propiedad con imágenes sin publicar",  
+  "province": "Buenos Aires",  
+  "city": "La Plata",  
+  "property_type": "Casa",  
+  "street": "Avenida Test 456",  
+  "price": 120000,  
+  "images": ["img1.jpg", "img2.jpg"]  
+}  
+
+#### Pasos
+1. Realizar una petición POST al endpoint /properties.
+2. Enviar el body con datos válidos.
+3. Cargar imágenes.
+4. No enviar el campo "featured_web".
+6. Observar la respuesta de la API.
+
+#### Resultado esperado
+- Código de respuesta 201 Created.
+- La propiedad se guarda correctamente en la base de datos.
+- El campo featured_web queda con valor false por defecto.
+- La propiedad no se publica en la web.
+- La respuesta incluye el ID de la propiedad creada.
