@@ -11,14 +11,16 @@
 
 1. Debe visualizarse un botón “Crear usuario”.
 2. Al seleccionar “Crear usuario”, debe redirigir al formulario de creación de usuario con los campos:
-   - Nombre y apellido
+   - Nombre
+   - Apellido
    - Email
    - Contraseña
 3. Deben visualizarse los botones:
    - Guardar
    - Cancelar
 4. El sistema debe validar los campos obligatorios:
-   - Nombre y apellido
+   - Nombre
+   - Apellido
    - Email
    - Contraseña
 5. El sistema debe impedir la creación de usuarios con email duplicado.
@@ -210,3 +212,119 @@
 #### Resultado esperado
 - El sistema descarta los datos ingresados.  
 - El usuario no es creado ni registrado en el sistema.
+
+--- 
+
+## CP-BE-01 – Creación exitosa de usuario Agente
+
+**Tipo:** Funcional – Backend  
+**Descripción:** Verificar que la API permita crear correctamente un usuario con rol Agente cuando se envían datos válidos.  
+**Prioridad:** Alta  
+**Criterios cubiertos:** 4, 7  
+
+#### Precondiciones
+- Usuario autenticado con rol Administrador.  
+- Token de sesión válido.  
+- No debe existir un usuario con el email informado.  
+
+#### Tipo de caso
+- Positivo  
+
+#### Endpoint
+- POST /users  
+
+#### Datos de entrada (Body)
+{  
+  "first_name": "Agente",  
+  "last_name": "Prueba",  
+  "email": "agente@prueba.com",  
+  "password": "prueba123"  
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /users.  
+2. Enviar el body con datos válidos.  
+3. Observar la respuesta de la API.  
+
+#### Resultado esperado
+- Código de respuesta 201 Created.  
+- La respuesta incluye un ID de usuario generado.  
+- El usuario se guarda correctamente en la base de datos.  
+- El rol asignado al usuario es Agente.  
+
+---
+
+## CP-BE-02 – Intento de creación con email duplicado
+
+**Tipo:** Funcional – Backend  
+**Descripción:** Verificar que la API impida la creación de un usuario con un email ya registrado.  
+**Prioridad:** Alta  
+**Criterios cubiertos:** 5  
+
+#### Precondiciones
+- Usuario autenticado con rol Administrador.  
+- Token de sesión válido.  
+- Debe existir previamente un usuario registrado con el email enviado.  
+
+#### Tipo de caso
+- Negativo  
+
+#### Endpoint
+- POST /users  
+
+#### Datos de entrada (Body)
+
+{  
+  "first_name": "Agente Duplicado",  
+  "last_name": "Prueba",  
+  "email": "agente@prueba.com",  
+  "password": "prueba123"  
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /users.  
+2. Enviar el body con un email ya existente.  
+3. Observar la respuesta de la API.  
+
+#### Resultado esperado
+- Código de respuesta 400 Bad Request o 409 Conflict.  
+- Mensaje indicando que el email ya se encuentra registrado.  
+- El usuario no se guarda en la base de datos.  
+
+---
+
+## CP-BE-03 – Intento de creación con campos obligatorios faltantes
+
+**Tipo:** Funcional – Backend
+**Descripción:** Verificar que la API no permita crear un usuario cuando faltan campos obligatorios.  
+**Prioridad:** Alta  
+**Criterios cubiertos:** 4  
+
+#### Precondiciones
+- Usuario autenticado con rol Administrador.  
+- Token de sesión válido.  
+
+#### Tipo de caso
+- Negativo  
+
+#### Endpoint
+- POST /users  
+
+#### Datos de entrada (Body)
+
+{  
+  "first_name": "",  
+  "last_name": "",  
+  "email": "",  
+  "password": ""  
+}
+
+#### Pasos
+1. Realizar una petición POST al endpoint /users.  
+2. Enviar el body con campos obligatorios vacíos o nulos.  
+3. Observar la respuesta de la API.  
+
+#### Resultado esperado
+- Código de respuesta 400 Bad Request.  
+- Mensaje indicando los campos obligatorios faltantes.  
+- El usuario no se guarda en la base de datos.  
