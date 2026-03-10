@@ -1,7 +1,7 @@
 # Web App Inmobiliaria – QA
 
 Proyecto de testing realizado sobre una aplicación web inmobiliaria desarrollada en un entorno IT colaborativo basado en un caso real con cliente.
-Este proyecto fue desarrollado como parte de una simulación de trabajo en un entorno IT real, con roles definidos dentro del equipo y un cliente que proporcionó los requerimientos del sistema.
+Este proyecto fue desarrollado como parte de una simulación de trabajo en un entorno IT real organizada por Foo Talent Group, con roles definidos dentro del equipo y un cliente que proporcionó los requerimientos del sistema.
 El objetivo fue replicar el flujo de trabajo de un proyecto profesional incluyendo gestión de tareas, documentación funcional y testing del sistema.
 
 ## Rol
