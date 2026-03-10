@@ -31,9 +31,13 @@ En este repositorio se incluyen **ejemplos representativos** de casos de prueba 
 Los casos completos se encuentran documentados y están disponibles a solicitud.
 
 ## Demo / Presentación
-- Video de presentación final del proyecto (YouTube).
-  - En el video participo explicando el contexto del proyecto y realizando la demo funcional de la aplicación.
-  - (Se puede indicar timestamp)
+ **Demo directa de la aplicación**
+   https://youtu.be/M5BCYJBA8is?t=4557
+   
+ **Presentación completa (contexto + explicación del proyecto)**
+   https://youtu.be/M5BCYJBA8is?t=4241
+
+En el video participo explicando el contexto del proyecto y realizando la demo funcional de la aplicación.
 
 ## Documentación
 - Historias de usuario
