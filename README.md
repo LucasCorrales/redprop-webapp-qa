@@ -48,11 +48,11 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 
 ## Historias de Usuario incluidas
 
-- [HU-01 – Crear propiedad inmobiliaria](test-cases/HU-01-Visualizar-Panel-Administrativo.md)
-- [HU-02 – Editar propiedad](test-cases/HU-02)
-- [HU-03 – Visualizar listado de propiedades](test-cases/HU-03)
-- [HU-04 – Eliminar propiedad](test-cases/HU-04)
-- [HU-05 – Validaciones del formulario](test-cases/HU-05)
+- [HU-01 – Visualizar Panel Administrativo](test-cases/HU-01-Visualizar-Panel-Administrativo.md)
+- [HU-02 – Crear Usuario Agente](test-cases/HU-02-Crear-Usuario-Agente.md)
+- [HU-03 – Crear Propiedad](test-cases/HU-03-Crear-Propiedad.md)
+- [HU-04 – Editar Información de Propiedad](test-cases/HU-04-Editar-Información-de-Propiedad.md)
+- [HU-05 – Eliminar Propiedad](test-cases/HU-05-Eliminar-Propiedad.md)
   
 ## Demo / Presentación
  **Demo directa de la aplicación:**
