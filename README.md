@@ -48,7 +48,7 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 
 ## Historias de Usuario incluidas
 
-- [HU-01 – Crear propiedad inmobiliaria](test-cases/HU-01)
+- [HU-01 – Crear propiedad inmobiliaria](test-cases/HU-01-Visualizar-Panel-Administrativo.md)
 - [HU-02 – Editar propiedad](test-cases/HU-02)
 - [HU-03 – Visualizar listado de propiedades](test-cases/HU-03)
 - [HU-04 – Eliminar propiedad](test-cases/HU-04)
