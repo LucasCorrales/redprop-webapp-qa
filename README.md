@@ -53,7 +53,9 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 - [HU-03 – Crear Propiedad](test-cases/HU-03-Crear-Propiedad.md)
 - [HU-04 – Editar Información de Propiedad](test-cases/HU-04-Editar-Información-de-Propiedad.md)
 - [HU-05 – Eliminar Propiedad](test-cases/HU-05-Eliminar-Propiedad.md)
-  
+
+Cada Historia de Usuario incluye sus criterios de aceptación y casos de prueba para frontend y backend.
+
 ## Demo / Presentación
  **Demo directa de la aplicación:**
    https://youtu.be/M5BCYJBA8is?t=4557
@@ -77,7 +79,6 @@ web-app-testing-qa
 README.md
 │
 test-cases/
-   README.md
    HU-01-crear-propiedad
    HU-02-editar-propiedad
    HU-03-listado-propiedades
