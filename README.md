@@ -46,7 +46,14 @@ En este repositorio se incluyen **ejemplos representativos** de casos de prueba 
 
 Los casos completos se encuentran documentados y están disponibles a solicitud.
 
+## Historias de Usuario incluidas
 
+- [HU-01 – Crear propiedad inmobiliaria](test-cases/HU-01)
+- [HU-02 – Editar propiedad](test-cases/HU-02)
+- [HU-03 – Visualizar listado de propiedades](test-cases/HU-03)
+- [HU-04 – Eliminar propiedad](test-cases/HU-04)
+- [HU-05 – Validaciones del formulario](test-cases/HU-05)
+  
 ## Demo / Presentación
  **Demo directa de la aplicación:**
    https://youtu.be/M5BCYJBA8is?t=4557
@@ -62,3 +69,17 @@ En el video participo explicando el contexto del proyecto y realizando la demo f
 - Documentación funcional
 
 Documentación completa disponible a solicitud.
+
+## Estructura del repositorio
+
+web-app-testing-qa
+│
+README.md
+│
+test-cases/
+   README.md
+   HU-01-crear-propiedad
+   HU-02-editar-propiedad
+   HU-03-listado-propiedades
+   HU-04-eliminar-propiedad
+   HU-05-validaciones-formulario
