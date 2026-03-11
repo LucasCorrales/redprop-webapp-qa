@@ -60,7 +60,7 @@ Para facilitar la lectura del portfolio, las historias de usuario incluidas repr
 - [HU-04 – Editar Información de Propiedad](test-cases/HU-04-Editar-Información-de-Propiedad.md)
 - [HU-05 – Eliminar Propiedad](test-cases/HU-05-Eliminar-Propiedad.md)
 
-Cada historia de usuario incluye:
+**Cada historia de usuario incluye:**
 
 - Descripción de la Historia de Usuario
 - Criterios de Aceptación
