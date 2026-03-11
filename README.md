@@ -54,8 +54,6 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 - [HU-04 – Editar Información de Propiedad](test-cases/HU-04-Editar-Información-de-Propiedad.md)
 - [HU-05 – Eliminar Propiedad](test-cases/HU-05-Eliminar-Propiedad.md)
 
-#### Estructura de las Historias de Usuario
-
 Cada historia de usuario incluye:
 
 - Descripción de la Historia de Usuario
