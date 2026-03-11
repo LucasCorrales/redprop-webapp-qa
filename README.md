@@ -54,7 +54,14 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 - [HU-04 – Editar Información de Propiedad](test-cases/HU-04-Editar-Información-de-Propiedad.md)
 - [HU-05 – Eliminar Propiedad](test-cases/HU-05-Eliminar-Propiedad.md)
 
-Cada Historia de Usuario incluye sus criterios de aceptación y casos de prueba para frontend y backend.
+#### Estructura de las Historias de Usuario
+
+Cada historia de usuario incluye:
+
+- Descripción de la Historia de Usuario
+- Criterios de Aceptación
+- Casos de prueba de frontend
+- Casos de prueba de backend / API
 
 ## Demo / Presentación
  **Demo directa de la aplicación:**
