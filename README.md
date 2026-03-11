@@ -79,13 +79,13 @@ Documentación completa disponible a solicitud.
 
 ## Estructura del repositorio
 
-web-app-testing-qa
-│
-README.md
-│
-test-cases/
-   HU-01-crear-propiedad
-   HU-02-editar-propiedad
-   HU-03-listado-propiedades
-   HU-04-eliminar-propiedad
-   HU-05-validaciones-formulario
+web-app-testing-qa  
+│  
+README.md  
+│  
+test-cases/  
+   HU-01-crear-propiedad  
+   HU-02-editar-propiedad  
+   HU-03-listado-propiedades  
+   HU-04-eliminar-propiedad  
+   HU-05-validaciones-formulario  
