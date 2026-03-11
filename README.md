@@ -49,7 +49,7 @@ Los casos completos se encuentran documentados y están disponibles a solicitud.
 ## Historias de Usuario incluidas
 
 Las siguientes historias de usuario y sus criterios de aceptación fueron redactados por mí durante el proyecto como parte del proceso de análisis funcional y sirvieron como base para el diseño de los casos de prueba.
-Para facilitar la lectura del portfolio, las historias de usuario incluidas representan una versión resumida de la documentación utilizada durante el proyecto. La documentación completa se encuentra disponible a solicitud.
+Para facilitar la lectura del portfolio, las historias de usuario incluidas representan una versión resumida de la documentación utilizada durante el proyecto.
 
 - [HU-01 – Visualizar Panel Administrativo](test-cases/HU-01-Visualizar-Panel-Administrativo.md)
 - [HU-02 – Crear Usuario Agente](test-cases/HU-02-Crear-Usuario-Agente.md)
